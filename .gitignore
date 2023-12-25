@@ -1,0 +1,6 @@
+.idea/
+target/
+.bsp/
+gen/
+**/*-dev.conf
+*.sc

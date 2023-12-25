@@ -1,0 +1,40 @@
+version: "3.9"
+services:
+  db1:
+    image: postgres:16.0-alpine3.18
+    volumes:
+      - dbData:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    networks:
+      - db
+    environment:
+      - POSTGRES_DB=nightcrawler
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready", "-d", "nightcrawler"]
+      interval: 30s
+      timeout: 60s
+      retries: 5
+      start_period: 80s
+
+#  migrate:
+#    image: arigaio/atlas:latest
+#    networks:
+#      - db
+#    depends_on:
+#      db1:
+#        condition: service_healthy
+  haProxy:
+    image: haproxy:2.3
+    ports:
+      - "80:80"
+    volumes:
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+
+volumes:
+  dbData:
+
+networks:
+  db:

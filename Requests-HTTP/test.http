@@ -1,0 +1,8 @@
+### Test endpoint
+GET http://localhost/text
+Authorization: Bearer hello
+
+
+
+### Monitor check (For proxy)
+HEAD localhost:80/monitors/check
