@@ -1,10 +1,9 @@
-package uk.nightcrawler
+package uk.zio_app
 
 import io.getquill.*
-import uk.nightcrawler.config.{AppConfig, applicationConfigLayer}
-import uk.nightcrawler.core.auth.UserAuthService
-import uk.nightcrawler.core.models.AccountUser
-import uk.nightcrawler.http.{httpRoutes, httpServer}
+import uk.zio_app.config.{AppConfig, applicationConfigLayer}
+import uk.zio_app.core.auth.UserAuthService
+import uk.zio_app.core.models.AccountUser
 import zio.*
 import zio.http.*
 

@@ -1,7 +1,9 @@
-package uk.nightcrawler
+package uk.zio_app
 
-import uk.nightcrawler.config.AppConfig
-import zio.* 
+import uk.zio_app.config.AppConfig
+import uk.zio_app.core.auth.UserAuthService
+import uk.zio_app.http.healthCheck
+import zio.*
 import zio.http.*
 
 val httpRoutes: HttpApp[UserAuthService] = (healthCheck).toHttpApp

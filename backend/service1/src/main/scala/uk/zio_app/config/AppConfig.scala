@@ -1,4 +1,4 @@
-package uk.nightcrawler.config
+package uk.zio_app.config
 
 enum Environments(val config: String) {
   case dev extends Environments("application-dev.conf")

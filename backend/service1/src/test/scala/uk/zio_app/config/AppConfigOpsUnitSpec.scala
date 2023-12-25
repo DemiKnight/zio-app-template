@@ -1,4 +1,4 @@
-package uk.nightcrawler.config
+package uk.zio_app.config
 
 import zio.*
 import zio.test.*

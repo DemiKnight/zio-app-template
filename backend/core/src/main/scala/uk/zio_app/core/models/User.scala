@@ -1,8 +1,8 @@
-package uk.nightcrawler.core.models
+package uk.zio_app.core.models
 
 import io.getquill.*
-import uk.nightcrawler.core.models.base.BaseEntity
-import uk.nightcrawler.core.sql.DatabaseContext
+import uk.zio_app.core.models.base.BaseEntity
+import uk.zio_app.core.sql.DatabaseContext
 
 import java.util.UUID
 

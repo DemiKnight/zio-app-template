@@ -1,7 +1,6 @@
-package uk.nightcrawler.models
+package uk.zio_app.models
 
-import uk.nightcrawler.core.models.base.UserRestrictedEntity
-
+import uk.zio_app.core.models.base.UserRestrictedEntity
 import java.util.UUID
 
 case class UserSettings(id: Long, uuid: UUID, userId: Long, supportInvited: Boolean)

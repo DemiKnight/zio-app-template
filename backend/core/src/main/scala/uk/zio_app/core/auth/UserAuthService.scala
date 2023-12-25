@@ -1,6 +1,6 @@
-package uk.nightcrawler.core.auth
+package uk.zio_app.core.auth
 
-import uk.nightcrawler.core.models.AccountUser
+import uk.zio_app.core.models.AccountUser
 import zio.*
 import zio.http.Header.Authorization
 import zio.http.Request

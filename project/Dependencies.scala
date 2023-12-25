@@ -2,14 +2,14 @@ import sbt.*
 
 object Dependencies {
 
-  val allDeps: Seq[sbt.ModuleID] = coreDeps ++ coreService ++ coreTestDeps
+  lazy val allDeps: Seq[sbt.ModuleID] = coreDeps ++ coreService ++ coreTestDeps
 
   val zioVersion = "2.0.20"
   val zioQuillVersion = "4.8.0"
   val zioHTTPVersion = "3.0.0-RC4"
   val zioConfigVersion = "4.0.0-RC16"
 
-  val coreDeps: Seq[ModuleID] = Seq(
+  lazy val coreDeps: Seq[ModuleID] = Seq(
     "dev.zio" %% "zio" % zioVersion,
     "dev.zio" %% "zio-streams" % zioVersion,
     "dev.zio" %% "zio-http" % zioHTTPVersion,
@@ -20,7 +20,7 @@ object Dependencies {
     "com.zaxxer" % "HikariCP" % "5.1.0",
   )
 
-  val coreService: Seq[ModuleID] = Seq(
+  lazy val coreService: Seq[ModuleID] = Seq(
     "dev.zio" %% "zio-config" % zioConfigVersion,
     "dev.zio" %% "zio-config-typesafe" % zioConfigVersion,
     "dev.zio" %% "zio-config-magnolia" % zioConfigVersion,
@@ -29,7 +29,7 @@ object Dependencies {
     "dev.zio" %% "zio-http" % zioHTTPVersion
   )
 
-  val coreTestDeps: Seq[sbt.ModuleID] = coreDeps ++ Seq(
+  lazy val coreTestDeps: Seq[sbt.ModuleID] = coreDeps ++ Seq(
     "org.scalatest" %% "scalatest" % "3.2.17",
     "dev.zio" %% "zio-test" % zioVersion,
     "dev.zio" %% "zio-test-sbt" % zioVersion,

@@ -1,4 +1,4 @@
-package uk.nightcrawler.core.models.base
+package uk.zio_app.core.models.base
 
 import java.util.UUID
 

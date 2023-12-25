@@ -1,10 +1,10 @@
-package uk.nightcrawler
+package uk.zio_app
 
 import com.zaxxer.hikari.{HikariConfig, HikariDataSource}
 import io.getquill.*
 import io.getquill.jdbczio.Quill
-import uk.nightcrawler.config.AppConfig
-import uk.nightcrawler.core.sql.DatabaseContext
+import uk.zio_app.config.AppConfig
+import uk.zio_app.core.sql.DatabaseContext
 import zio.*
 
 import javax.sql.DataSource
